@@ -1,0 +1,343 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+   background-image: url(Imagenes/pexels-olga-lazacovici-225421001-12465474.jpg);
+   filter:contrast();
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+   display: flex;
+   text-align: center;
+   flex-direction: column;
+   align-items: center;
+    
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.651);
+    z-index: 1;
+    
+}
+
+h1 {
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  position: absolute;
+  top: 20%;
+  left: 0%;
+    font-family: "Poppins", sans-serif;
+    color: wheat;
+    font-size: 50px;
+    z-index: 2;
+    letter-spacing: 10px;
+}
+
+h2{
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  margin: 5px 0px;
+  color: wheat;
+  font-size: 35px;
+}
+
+h4{
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    margin: 5px 0px;
+    color: wheat;
+ 
+}
+
+
+
+
+button:hover {
+    scale: .9;
+}
+.container {
+    position: relative;
+    width: 90%;
+    min-height: 80%;
+    background-color: rgba(255, 255, 255, 0.199);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 3;
+    padding: 25px 10px 0px 55px;
+}
+
+.panelTareas{
+    display: flex;
+    flex-wrap: wrap;
+   
+}
+
+.task{
+    --b: 1px;   /* border thickness */
+    --s: .65em; /* size of the corner */
+    --color: rgb(245, 222, 179);
+    --_p: var(--s);
+    background-color: rgba(255, 255, 255, 0.034);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    background:
+      conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--color) 0)
+      var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+    font-size: 16px;
+    color: white;
+    width: 250px;
+    font-family: "Poppins", sans-serif;
+    margin-left: 15px;
+    margin-bottom: 15px;
+    padding: 25px ;
+    text-align: center;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.task-description{
+  margin-bottom: 25px;
+  padding: 10px;
+  margin-bottom: 50px;
+}
+
+.editTask-deleteTask{
+    /* border: 1px solid rgb(0, 4, 255); */
+    width: 70px;
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    margin-top: 10px;
+    justify-content: center;
+    position: absolute;
+    bottom: 2%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+
+.delete, .edit{
+  background-color: #0000;
+  color: #f5deb3;
+  border: none;
+  transition: all 0.5s;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  /* border: 1px solid rgb(247, 0, 255); */
+}
+
+
+
+p{
+    margin-bottom: 15px;
+}
+
+.menuTask{
+        width: 350px;
+        
+        position: absolute;
+        top: 55%;
+        right: 0%;
+        justify-content: center;
+        background-color: rgba(255, 255, 255, 0.199);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        border-radius: 5px;
+        display: none;
+        transform: translate(-50%, -50%);
+        padding: 20px;
+        border-radius: 10px;
+        cursor: move;
+        z-index: 3;
+    }
+
+
+
+
+/* CSS */
+.addtask {
+  --b: 1px;   /* border thickness */
+  --s: .55em; /* size of the corner */
+  --color: wheat;
+  color: var(--color);
+  --_p: var(--s);
+  background:
+    conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--color) 0)
+    var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+  transition: .3s linear, color 0s, background-color 0s;
+  outline: var(--b) solid #0000;
+  outline-offset: .6em;
+  font-size: 16px;
+  border: 0;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 120px;
+  height: 50px;
+  padding: 15px 10px 0px ;
+  padding-bottom: 40px;
+  margin: 10px;
+  background-color: transparent;
+  border-radius: 5px;
+  font-family: "Poppins", sans-serif;
+  color: rgb(255, 255, 255);
+  z-index: 4;
+  transition: all 0.5s ;
+  cursor: pointer;
+  
+}
+
+.addtask:hover,
+.addtask:focus-visible{
+  --_p: 0px;
+  outline-color: var(--color);
+  outline-offset: .01em;
+}
+
+.addtask:active {
+  background: var(--color);
+  color: #fff;
+}
+
+p {
+    font-family: "Inconsolata", monospace;
+}
+
+.datos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    /* border: 1px solid rgb(0, 4, 255); */
+    
+}
+
+.margin{
+    font-family: "Inconsolata", monospace;
+    margin: 10px 0px;
+    color: rgb(255, 255, 255);
+}
+
+.inp{
+    width: 
+    100%;
+    /* border: 1px solid rgb(60, 255, 0); */
+}
+
+input, textarea, select{
+    width: 100%;
+    border: 1px solid wheat;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.199);
+    padding: 10px 5px;
+    font-family: "Inconsolata", monospace;
+    font-size: 16px;
+}
+
+
+
+input:focus, textarea:focus {
+    color: wheat; 
+    outline: black solid 1px;
+    border: none;
+}
+
+
+
+
+
+input[type="date"], select{
+        color: #222222;        
+}
+
+
+
+.buttons{
+    width: 100px;
+    display: flex;
+    /* border: 1px solid rgb(0, 4, 255); */
+    ;
+}
+
+.close, .add{
+   background-color: #0000;
+   color: rgb(245, 222, 179);
+   border: none;
+   padding: 10px;
+   transition: all 0.5s;
+   cursor: pointer;
+}
+
+.close:hover, .add:hover{
+    scale: .7;
+}
+
+
+.buttons img{
+    width: 100%;
+}
+
+
+.toast{
+    width: 300px;
+    position: absolute;
+    top: 0;
+    transform: translateX(-50%);
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    border-radius: 0.5rem;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    transition: 0.2s ease-in;
+    display: none;
+    z-index: 4;
+    font-family: "Poppins", sans-serif;
+  }
+
+  .toast-error {
+    background-color: red;
+  }
+  
+  .toast-exito {
+    background-color: rgb(20, 185, 20);
+  }
+
+  .toast-active {
+    display: block;
+    animation: slideinTop 4s ease-out forwards;
+  }
+
+  @keyframes slideinTop {
+    0% {
+      transform: translateY(0%);
+    }
+    30%, 50%, 70% {
+      opacity: 1;
+      transform: translateY(50%);
+    }
+    100% {
+      opacity: 0;
+      transform: translateX(0%);
+    }
+  }
+

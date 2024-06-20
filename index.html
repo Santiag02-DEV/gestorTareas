@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="overlay"></div>
+    <button class="addtask" type="submit">Add task</button>
+    <div class="toast"></div>
+    <h1>Task organizer</h1>
+    <div class="container">
+        <div class="panelTareas"></div>
+    </div> 
+    <div class="menuTask">
+        <form action="" class="formu">
+            <div class="datos">
+                <h2>New task</h2>
+            <div class="margin">
+                <label for="name">Title</label>
+            </div>
+            <div class="inp">
+                <input type="text" id="name" >
+            </div>
+            
+            <div class="margin">
+                <label for="date">Date</label>
+            </div>
+            <div class="inp">
+                <input type="date" name="date" id="date" >
+            </div>
+            <div class="margin">
+                <label for="priority">Priority</label>
+            </div>
+            <select  class="inp" name="priority" id="priority">
+                <option value=""></option>
+                <option value="Priority">Priority</option>
+                <option value="Not priority">Not priority</option>
+            </select>
+            <div class="margin">
+                <label for="description">Description</label>
+            </div>
+            <div class="inp">
+                <textarea name="description" id="description" cols="20" rows="10"></textarea>
+            </div>
+            <div class="buttons">
+                <button class="close" type="submit"><img src="Imagenes/icons8-close.svg"  alt=""></button>
+                <button class="add" type="submit"><img src="Imagenes/icons8-check.svg" alt=""></button>
+            </div>
+            
+        </form>
+    </div>
+    
+
+<script src="script.js"></script>
+</body>
+</html>
