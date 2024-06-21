@@ -5,7 +5,7 @@
 }
 
 body {
-    height: 100vh;
+  height: 100vh;
    background-image: url(Imagenes/pexels-olga-lazacovici-225421001-12465474.jpg);
    filter:contrast();
    background-size: cover;
@@ -58,16 +58,19 @@ h4{
  
 }
 
-
-
-
 button:hover {
     scale: .9;
 }
 .container {
     position: relative;
     width: 90%;
-    min-height: 80%;
+    height: 100vh;
+}
+
+.panelTareas{
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 90vh;
     background-color: rgba(255, 255, 255, 0.199);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
@@ -75,12 +78,7 @@ button:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     z-index: 3;
     padding: 25px 10px 0px 55px;
-}
-
-.panelTareas{
-    display: flex;
-    flex-wrap: wrap;
-   
+    position: relative;
 }
 
 .task{
@@ -107,6 +105,7 @@ button:hover {
     align-items: center;
     flex-direction: column;
     position: relative;
+    min-height: 150px;
 }
 
 .task-description{
