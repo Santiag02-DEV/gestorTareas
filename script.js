@@ -116,6 +116,15 @@ function guardarTarea(e) {
     showToast('exito', mensaje);
 }
 
+function eliminarTarea(e) {
+    const index = e.currentTarget.getAttribute('data-index');
+    const arrayTareasRecuperados = JSON.parse(localStorage.getItem('arrayTareas'));
+    arrayTareasRecuperados.splice(index, 1);
+    localStorage.setItem('arrayTareas', JSON.stringify(arrayTareasRecuperados));
+    pintarTareas(arrayTareasRecuperados);
+    showToast('exito', 'Tarea eliminada correctamente');
+}
+
 function showToast(tipo, mensaje) {
     const toast = document.querySelector('.toast');
     toast.textContent = mensaje;
